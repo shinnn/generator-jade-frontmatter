@@ -1,0 +1,27 @@
+- function concatTitle(joinStr){
+-   var res = '' + site.title;
+-   if(title){
+-     res = title + ' ' + joinStr + ' ' + res;
+-   }
+-   return res;
+- };
+
+- var joinedKeywords = (function(){
+-   var res = ''
+-   if(Array.isArray(site.keywords)){
+-     res = site.keywords.join(',')
+-   }else{
+-     res = site.keywords;
+-   }
+-   
+-   return res;
+- }());
+
+- function htmlPath( path ){
+-   return '/' + (DEBUG? 'debug/': '') + (path? path: '');
+- }
+
+//- http://stackoverflow.com/questions/1349404/generate-a-string-of-5-random-characters-in-javascript
+- function randStr() {
+-   return Math.random().toString(36).substring(14);
+- }

@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+body{
+  margin: 0;
+  padding: 0;
+  
+  // IE向けバッドノウハウ？
+  // TODO: 検証
+  border: none;
+  
+  -webkit-text-size-adjust: 100%;
+
+  // これを指定し、Safaiでフォントが細く見える現象を防ぐ
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+a{
+  text-decoration: none;
+  
+  &:focus, &:active, &::-moz-focus-inner{
+    border: none;
+    outline: 0;
+  }
+}
+
+p, h1, h2, h3, h4, hr, ol, ul{
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+img, figure{
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol{
+  list-style-type: none;
+}
+

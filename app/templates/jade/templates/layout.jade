@@ -1,0 +1,64 @@
+include _helpers
+
+!!! 5
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    block title
+      meta(http-equiv='X-PJAX-Title', content= concatTitle('-'))
+      title= concatTitle('-')
+    
+    meta(name='keywords', content= joinedKeywords)
+    meta(name='description', content= description || site.description)
+    meta(name='author', content= site.author)
+    
+    meta(property='og:type', content='website')
+    meta(property='og:url', content= site.url)
+    meta(property='og:image', content='')
+    meta(property='og:description', content= description || site.description)
+    meta(property='og:site_name', content= concatTitle('-'))
+        
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='format-detection', content='telephone=no')
+    
+    //-link(href='/img/icons/', rel='apple-touch-icon-precomposed', sizes='144x144')
+    //-link(href='/img/icons/', rel='apple-touch-icon-precomposed', sizes='114x114')
+    //-link(href='/img/icons/', rel='apple-touch-icon-precomposed', sizes='72x72')
+    
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:title', content= concatTitle('-'))
+    meta(name='twitter:description', content= description || site.description)
+    meta(name='twitter:image:src', content='')
+    meta(name='twitter:domain', content='')
+    
+    //-meta(name='msapplication-TileImage', content='')
+    meta(name='msapplication-TileColor', content='#FFFFFF')
+    
+    link(rel='author', type='txt/plain', href='/humans.txt')
+    
+    link(href='/css/styles.css?v=' + randStr(), rel='stylesheet')
+    
+    script(src='/js/modernizr.js?v=' + randStr())
+    
+    //if lt IE 9
+      script(src='/js/vendor.ie.js')
+
+  body
+    include _google-analytics
+    
+    #container
+      main(class= pageClass)
+        #content
+          block inner
+
+    block scripts
+      include _jquery
+      
+      if DEBUG
+        script(src='/debug/js/vendor.js')
+        script(src='/debug/bower_components/benchmark/benchmark.js')
+        script(src='/debug/js/main.js')
+      else
+        script(src='/js/main.js?v=' + randStr())

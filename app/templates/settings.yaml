@@ -1,0 +1,11 @@
+author: aaa bbb
+siteURL: ''
+
+srcPath: ''
+destPath: 'site/'
+
+templatesPath: 'jade/templates/'
+documentsPath: 'jade/pages/'
+dataPath: 'jade/data/'
+
+liveReloadPort: 8000

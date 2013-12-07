@@ -1,0 +1,41 @@
+{
+  "name": "generator-jade-frontmatter",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/shinnn/generator-jade-frontmatter",
+  "bugs": "https://github.com/shinnn/generator-jade-frontmatter/issues",
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "email": "snnskwtnb@gmail.com",
+    "url": "https://github.com/shinnn"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shinnn/generator-jade-frontmatter.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.14.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
