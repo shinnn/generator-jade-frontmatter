@@ -1,18 +1,14 @@
 {
-  "name": "shinnn.github.io",
+  "name": "foo bar",
   "version": "0.0.0",
-  "homepage": "https://github.com/shinnn/shinnn.github.io",
   "authors": [
-    "Shinnosuke Watanabe <snnskwtnb@gmail.com>"
+    "foo bar"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
     "jquery": "latest",
     "jquery1": "jquery#1",
-    "jquery-pjax": "latest",
-    "jquery.transit": "latest",
-    "jquery.lazyload": "latest",
     "html5shiv": "latest",
     "selectivizr": "latest",
     "respond": "latest",
@@ -24,12 +20,6 @@
   "exportsOverride": {
     "/jquery\\d?$/": {
       "public": "jquery.min.js"
-    },
-    "jquery.transit": {
-      "jquery.transit": "jquery.transit.js"
-    },
-    "jquery.lazyload": {
-      "jquery.lazyload": "jquery.lazyload.min.js"
     },
     "html5shiv": {
       "ie": "dist/html5shiv.js"
