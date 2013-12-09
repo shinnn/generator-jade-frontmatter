@@ -1,5 +1,6 @@
 # generator-jade-frontmatter
 
+[![NPM version](https://badge.fury.io/js/generator-jade-frontmatter.png)](http://badge.fury.io/js/generator-jade-frontmatter)
 [![Build Status](https://secure.travis-ci.org/shinnn/generator-jade-frontmatter.png?branch=master)](https://travis-ci.org/shinnn/generator-jade-frontmatter)
 [![Dependency Status](https://david-dm.org/shinnn/generator-jade-frontmatter.png)](https://david-dm.org/shinnn/generator-jade-frontmatter)
 [![devDependency Status](https://david-dm.org/shinnn/generator-jade-frontmatter/dev-status.png)](https://david-dm.org/shinnn/generator-jade-frontmatter#info=devDependencies)
@@ -48,4 +49,4 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 
 ## License
 
-[MIT License](http://en.wikipedia.org/wiki/MIT_License)
+Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).

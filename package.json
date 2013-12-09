@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "A generator for Yeoman",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "jade",
+    "front matter"
   ],
   "homepage": "https://github.com/shinnn/generator-jade-frontmatter",
   "bugs": "https://github.com/shinnn/generator-jade-frontmatter/issues",
@@ -21,7 +23,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "yeoman-generator": "~0.14.0"
+    "yeoman-generator": "~0.14.1"
   },
   "devDependencies": {
     "mocha": "~1.15.1"

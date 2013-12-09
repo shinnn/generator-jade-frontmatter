@@ -1,9 +1,10 @@
 'use strict';
+
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 
-var JadeFmGenerator = module.exports = function JadeFmGenerator(args, options, config) {
+var JadeFmGenerator = function JadeFmGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
@@ -12,6 +13,8 @@ var JadeFmGenerator = module.exports = function JadeFmGenerator(args, options, c
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
+
+module.exports = JadeFmGenerator;
 
 util.inherits(JadeFmGenerator, yeoman.generators.Base);
 
