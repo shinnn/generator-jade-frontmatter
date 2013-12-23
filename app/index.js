@@ -61,6 +61,7 @@ GeneratorProto.assets = function assets() {
 };
 
 GeneratorProto.projectfiles = function projectfiles() {
+  this.copy('gitignore.txt', '.gitignore');
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
   this.copy('README.md', 'README.md');
