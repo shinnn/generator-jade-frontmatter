@@ -4,6 +4,7 @@
 [![Build Status](https://secure.travis-ci.org/shinnn/generator-jade-frontmatter.png?branch=master)](https://travis-ci.org/shinnn/generator-jade-frontmatter)
 [![Dependency Status](https://david-dm.org/shinnn/generator-jade-frontmatter.png)](https://david-dm.org/shinnn/generator-jade-frontmatter)
 [![devDependency Status](https://david-dm.org/shinnn/generator-jade-frontmatter/dev-status.png)](https://david-dm.org/shinnn/generator-jade-frontmatter#info=devDependencies)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/generator-jade-frontmatter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 A generator for [Yeoman](http://yeoman.io).
 
