@@ -5,4 +5,5 @@ node_js:
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-jade-frontmatter' ]; then cd .. && eval "mv $currentfolder generator-jade-frontmatter" && cd generator-jade-frontmatter; fi
-
+notifications:
+  email: false
