@@ -45,7 +45,7 @@
     "grunt-rsync": "~0.2.1",
     "lodash": "~2.4.1",
     "coffeelint": "~1.0.2",
-    "jade": "~1.0.2",
+    "jade": "~1.1.0",
     "load-grunt-tasks": "~0.2.0",
     "grunt-autoprefixer": "~0.6.3",
     "ini": "~1.1.0",
