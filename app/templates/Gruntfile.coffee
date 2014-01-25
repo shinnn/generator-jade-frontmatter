@@ -34,36 +34,14 @@ module.exports = (grunt) ->
   
   JS_ROOT = "#{ SRC_ROOT }js/"
   
-  # Preserve banner/license comments certainly
-  isIncludedInBanner = do ->
-    prevCommentLine = 0
-
-    return (node, comment) ->
-      if comment.type is 'comment2' and
-      (/^\!|@preserve|@license|@cc_on/mi.test comment.value)
-        return true
-      
-      # コメントが先頭行にあるか、先頭行から連なるコメントである場合、バナーであると判断する
-      result = comment.line <= 1 or comment.line is prevCommentLine + 1
-
-      # コメントがバナーに含まれる場合、そのコメントの行番号を保存する
-      # コメントがバナーではない場合、行番号の保存をリセットする
-      if result
-        prevCommentLine = comment.line
-      else
-        prevCommentLine = 0
-        
-      return result
-  
   grunt.initConfig
     bower:
       options:
         targetDir: "#{ DEST_ROOT }.tmp/bower_exports/"
         cleanTargetDir: true
+      install:
         bowerOptions:
           production: true
-      
-      install: {}
       
     modernizr:
       devFile: 'remote'
@@ -167,11 +145,11 @@ module.exports = (grunt) ->
     
     uglify:
       options:
-        preserveComments: isIncludedInBanner
+        preserveComments: require 'uglify-save-license'
       
       main:
         options:
-          banner: "/*! Copyright (c) 2013 #{ settings.author } | MIT License */"
+          banner: "/*! Copyright (c) 2014 #{ settings.author } | MIT License */"
           compress:
             global_defs:
               DEBUG: false
@@ -423,7 +401,6 @@ module.exports = (grunt) ->
           grunt.file.write destPath, html
           console.log "File \"#{ destPath }\" created."
       
-  
   # Remove 'width' and 'height' properties from SVG
   grunt.task.registerTask 'flexSVG', 'An internal task.', ->
     _cwd = "#{ SRC_ROOT }img/"
@@ -434,13 +411,6 @@ module.exports = (grunt) ->
       if match?
         svgString = svgString.replace match, 'viewBox'
       grunt.file.write "#{ DEST_ROOT }.tmp/svg/#{ filepath }", svgString
-  
-  grunt.task.registerTask 'addNoJekyll',
-    'Add .nojekyll if needed',
-    ->
-      if grunt.file.expand("#{ DEST_ROOT }**/_*").length > 0
-        grunt.file.write  "#{ DEST_ROOT }.nojekyll", ''
-        console.log "File \"#{ DEST_ROOT }.nojekyll\" created."
       
   grunt.task.registerTask 'postprocessCSS', ['autoprefixer', 'cssmin']
 
